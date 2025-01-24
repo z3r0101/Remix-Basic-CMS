@@ -1,5 +1,11 @@
 ## Installation Guide
 
+## Disclaimer
+
+This repository serves as a sample project provided for guidance and educational purposes only. It demonstrates a basic setup of a Remix application with Docker and database migrations using Drizzle ORM.
+
+---
+
 ### 1. Build Docker Images
 Run the following command to build the Docker containers:
 ```bash
