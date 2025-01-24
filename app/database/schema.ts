@@ -6,7 +6,7 @@ export const Contact = pgTable("Contact", {
   name: text("name").notNull(),
   email: text("email").notNull(),
   message: text("message").notNull(),
-  createdAt: timestamp("createdAt").default(sql`NOW()`), // Use sql helper for default value
+  created_at: timestamp("created_at").default(sql`NOW()`), // Use sql helper for default value
 });
 
 // User table

@@ -57,7 +57,7 @@ export default function DeleteUser() {
             </tr>
             <tr>
               <th>Created At</th>
-              <td>{new Date(user.createdAt).toLocaleString()}</td>
+              <td>{new Date(user.created_at).toLocaleString()}</td>
             </tr>
           </tbody>
         </table>

@@ -1,0 +1,25 @@
+# Node modules and dependencies
+node_modules
+npm-debug.log
+
+# Logs
+*.log
+
+# Remix build artifacts
+build
+public/build
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Environment files (if any)
+.env
+.env.local
+.env.development
+.env.production
+
+# Docker-specific files
+docker-compose.yml
+Dockerfile
+.dockerignore

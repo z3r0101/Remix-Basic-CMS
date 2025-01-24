@@ -36,7 +36,7 @@ export default function Index() {
                     dangerouslySetInnerHTML={{ __html: content.copy }}
                   ></div>
                   <p className="text-muted small">
-                    Published on {new Date(content.createdAt).toLocaleDateString()}
+                    Published on {new Date(content.created_at).toLocaleDateString()}
                   </p>
                 </div>
               </article>
