@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  remix-app:
+    container_name: remix-basic-cms-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: remix-basic-cms:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./app:/data/app
+      - ./public/uploads:/data/public/uploads
+      - ./vite.config.ts:/data/vite.config.ts
+      - ./drizzle.config.ts:/data/drizzle.config.ts
+      - /app/node_modules
+    environment:
+      NODE_ENV: development
+      SESSION_SECRET: 8d7sf9c8vsc89sdf8df8dsf79
+    env_file:
+      - .env
+    command: npm run dev
+
+  postgres:
+    container_name: remix-basic-cms-db
+    image: postgres:16
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: q1w2e3r4t5y6u7i8o9p0
+      POSTGRES_DB: projectdb
+    #ports:
+    #  - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data  # Mount local directory to container

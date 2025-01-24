@@ -1,0 +1,11 @@
+# Ignore the following files and directories to avoid copying them into Docker
+node_modules/
+postgres-data/
+.env
+.git/
+.cache/
+build/
+public/
+*.log
+notes.txt
+.DS_Store
